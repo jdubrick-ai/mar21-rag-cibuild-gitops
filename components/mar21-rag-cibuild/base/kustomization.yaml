@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:
+  argocd/app-name: mar21-rag-cibuild
+  janus-idp.io/tekton: mar21-rag-cibuild
+  backstage.io/kubernetes-id: mar21-rag-cibuild
+  backstage.io/kubernetes-namespace: rhdh-app
+  app.kubernetes.io/part-of: mar21-rag-cibuild
+resources:
+  - initialize-namespace/
+  - deployment-model-server.yaml
+  - service-model-server.yaml
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
+  - model-config.yaml
+  - deployment-database.yaml
+  - service-database.yaml
+  - database-config.yaml

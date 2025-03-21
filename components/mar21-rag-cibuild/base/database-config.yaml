@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mar21-rag-cibuild-database-config
+data:
+  VECTORDB_HOST: "mar21-rag-cibuild-database"
+  VECTORDB_PORT: "8000"
